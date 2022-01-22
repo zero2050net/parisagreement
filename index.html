@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Paris Agreement .• zero2050.net</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  background-color: hsl(120, 100%, 98%);
+}
+
+/* Style the side navigation */
+.sidenav {
+  position: fixed;
+  overflow-x: show;
+  overflow-y: scroll;
+  top: 5px; /*100px to give some room for the sidebar heading (without this, absolute position will make the nav overlap)*/
+  left: 5px; /* you can make this zero and add `padding-left: 15px` */
+  bottom: 15px; /* leave some room for copyright section */
+  right: 75%; /*this may vary from browser to browser (i suggest using the width of the widest scrollbar, then adjust for padding-right)*/
+}
+
+.sidenav .container{
+    max-width: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: 75%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  align: left;
+  text-align: left;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 25%;
+  margin-right: 0%;
+}
+
+/* Style the profile picture */ 
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: solid 3px #00ff15;
+  border-width: 4px;
+}
+
+/* Style the profile picture */ 
+.avatar-small {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding-right: 10px;
+   padding-bottom: 10px;
+   background-color: transparent;
+   color: black;
+   text-align: right;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+  .accordion {
+  background-color: #f5fff5;
+  color: #000000;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #f5fff5; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #f5fff5;
+  overflow: show;
+}
+
+  .accordion:after {
+  content: '▼';
+  color: #000000;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+  
+  <style>
+body {
+  color: blue;
+}
+h1 {
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 30px
+}
+h2 {
+  color: #ff0000;
+  font-size: 40px;
+}
+p1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 5px;
+  }
+p2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  }
+p3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 60px;
+  }
+p4 {
+  font-family: 'Space Mono', monospace;
+  font-size: 70px;
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href=""><img src="unfccc.png" alt="Avatar" class="avatar"></a>
+  <p>The Paris Agreement</p>
+  <p2><a href="https://unfccc.int/files/essential_background/convention/application/pdf/arabic_paris_agreement.pdf" target="_blank">Arabic</a></p2>
+  <p2>Chinese</p2>
+  <p2>English</p2>
+  <p2>French</p2>
+  <p2>Russian</p2>
+  <p2>Spanish</p2>
+</div>
+
+<div class="content">
+  <br>
+  <p4 id="demo"></p4>
+  <br>
+  
+  <p>The Paris Agreement’s central aim is to strengthen the global response to the threat of climate change by keeping a global temperature rise this century well below 2 degrees Celsius above pre-industrial levels and to pursue efforts to limit the temperature increase even further to 1.5 degrees Celsius.</p>
+  <br>
+  <p>Source: <a href="https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement/key-aspects-of-the-paris-agreement" target="_blank">UNFCCC</a></p>
+  <br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+  <br>
+  <br>
+  <br>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2050 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+ <div class="footer">
+ <p><a href="https://github.blog/2021-04-22-environmental-sustainability-github/" target="_blank">Sustainability via GitHub</a></p>
+ <p2> Zero Ecosystem is a not for profit company limited by guarantee (Company No. 13349586) registered in England, United Kingdom </p2>
+ <br>
+  <img src="favicon.png"
+       width="25px";
+       height="25px">
+
+ <p2> Created in Liverpool </p2>
+</div>
+
+</body>
+</html>
