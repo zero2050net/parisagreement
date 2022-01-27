@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles.css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,127 +21,6 @@ body {
   margin: 0;
   font-family: 'Space Mono', monospace;
   background-color: hsl(120, 100%, 98%);
-}
-
-/* Style the side navigation */
-.sidenav {
-  position: fixed;
-  overflow-x: show;
-  overflow-y: scroll;
-  top: 5px; /*100px to give some room for the sidebar heading (without this, absolute position will make the nav overlap)*/
-  left: 5px; /* you can make this zero and add `padding-left: 15px` */
-  bottom: 15px; /* leave some room for copyright section */
-  right: 75%; /*this may vary from browser to browser (i suggest using the width of the widest scrollbar, then adjust for padding-right)*/
-}
-
-.sidenav .container{
-    max-width: 20px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: 75%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-}
-
-
-/* Side navigation links */
-.sidenav a {
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-  align: left;
-  text-align: left;
-}
-
-/* Change color on hover */
-.sidenav a:hover {
-  color: black;
-}
-
-/* Style the content */
-.content {
-  margin-left: 25%;
-  margin-right: 0%;
-}
-
-/* Style the profile picture */ 
-.avatar {
-  vertical-align: middle;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: solid 3px #00ff15;
-  border-width: 4px;
-}
-
-/* Style the profile picture */ 
-.avatar-small {
-  vertical-align: middle;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-
-.footer {
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   padding-right: 10px;
-   padding-bottom: 10px;
-   background-color: transparent;
-   color: black;
-   text-align: right;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-  .accordion {
-  background-color: #f5fff5;
-  color: #000000;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 14px;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #f5fff5; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: #f5fff5;
-  overflow: show;
-}
-
-  .accordion:after {
-  content: '▼';
-  color: #000000;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "▲";
-}
-
-.responsive {
-  width: 100%;
-  height: auto;
 }
   
   <style>
@@ -185,7 +65,6 @@ p4 {
   <p2><a href="https://unfccc.int/files/essential_background/convention/application/pdf/french_paris_agreement.pdf" target="_blank">French</a></p2>
   <p2><a href="https://unfccc.int/files/essential_background/convention/application/pdf/russian_paris_agreement.pdf" target="_blank">Russian</a></p2>
   <p2><a href="https://unfccc.int/files/essential_background/convention/application/pdf/spanish_paris_agreement.pdf" target="_blank">Spanish</a></p2>
-  <p><a href="#Aims">Aims</a></p>
 </div>
 
 <div class="content">
@@ -193,19 +72,15 @@ p4 {
   <p4 id="demo"></p4>
   <br>
   
-  <button class="accordion"><h1 id="What is the Paris Agreement?">What is the Paris Agreement?</h1></button>
-  <div class="panel">
-  <p>At COP 21 in Paris, on 12 December 2015, Parties to the UNFCCC reached a landmark agreement to combat climate change and to accelerate and intensify the actions and investments needed for a sustainable low carbon future. The Paris Agreement builds upon the Convention and – for the first time – brings all nations into a common cause to undertake ambitious efforts to combat climate change and adapt to its effects, with enhanced support to assist developing countries to do so. As such, it charts a new course in the global climate effort.</p>
-  </div>
   
-  <button class="accordion"><h1 id="Aims">Aims</h1></button>
-  <div class="panel">
-  <p>The Paris Agreement’s central aim is to strengthen the global response to the threat of climate change by keeping a global temperature rise this century well below 2°C above pre-industrial levels and to pursue efforts to limit the temperature increase even further to 1.5°C. Additionally, the agreement aims to increase the ability of countries to deal with the impacts of climate change, and at making finance flows consistent with a low GHG emissions and climate-resilient pathway. To reach these ambitious goals, appropriate mobilization and provision of financial resources, a new technology framework and enhanced capacity-building is to be put in place, thus supporting action by developing countries and the most vulnerable countries, in line with their own national objectives. The Agreement also provides for an enhanced transparency framework for action and support.</p>
-  </div>
-  
+  <p>Goal</p>
+  <p4>1.5°C</p4>
+  <p2>Pursue efforts to limit temperature increase to 1.5°C</p2>
+  <p>Aim</p>
+  <p4>2°C</p4>
+  <p2>Keep global temperature rise this century well below 2°C above pre-industrial levels</p2>
   <br>
-  <p>Source: <a href="https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement/key-aspects-of-the-paris-agreement" target="_blank">UNFCCC</a></p>
-  <br>
+
   </div>
   <br>
   <br>
@@ -286,8 +161,8 @@ var x = setInterval(function() {
   <br>
 
  <div class="footer">
- <p1>⦿ Sustainability</p1>
- <p><a href="https://github.blog/2021-04-22-environmental-sustainability-github/" target="_blank">Hosting Carbon Neutral • zero2050.net ○ GitHub</a></p>
+ <p1>⦿ Carbon Neutral</p1>
+ <p><a href="https://github.blog/2021-04-22-environmental-sustainability-github/" target="_blank">• zero2050.net ○ GitHub</a></p>
  <br>
  <p2> Zero Ecosystem is a not for profit company limited by guarantee (Company No. 13349586) registered in England, United Kingdom </p2>
  <br>
